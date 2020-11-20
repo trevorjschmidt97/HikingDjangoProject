@@ -9,7 +9,7 @@ class Hike(models.Model):
     location = models.CharField(max_length=30)
 
     def __str__(self) -> str:
-        return ("Hike: " + self.name)
+        return ("Hike: " + self.name + "\n\t" + "Duration: " + self.duration + "\n\t" + "Description: " + self.description + "\n\t" + "Length: " + self.length + "\n\t" + "Location: " + self.location)
 
 class User(models.Model):
     username = models.CharField(max_length=30)
@@ -24,4 +24,4 @@ class User(models.Model):
         return (self.firstname + " " + self.lastname)
 
     def __str__(self) -> str:
-        return ("User: " + self.username + "\n\tFirstname: " + self.firstname + "\n\tLastname: " + self.lastname)
+        return ("User: " + self.username + "\n\tFirstname: " + self.firstname + "\n\tLastname: " + self.lastname + "\n\tEmail: " + self.email)

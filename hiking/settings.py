@@ -79,20 +79,25 @@ WSGI_APPLICATION = 'hiking.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default' : {},
+    'default' : {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    },
     'hiker': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hiker',
+        'NAME': 'Hiker',
         'USER': 'postgres',
         'PASSWORD' : 'Bobthebuilder12#',
-        'HOST' : 'LocalHost'
+        'HOST' : 'localhost',
+        'PORT' : '5432'
     },
     'hike': { 
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hikes',
+        'NAME': 'Hikes',
         'USER': 'postgres',
         'PASSWORD' : 'Bobthebuilder12#',
-        'HOST' : 'LocalHost'
+        'HOST' : 'localhost',
+        'PORT' : '5432'
     }
 }
 

@@ -11,7 +11,7 @@ class Hike(models.Model):
     def __str__(self) -> str:
         return ("Hike: " + self.name + "\n\t" + "Duration: " + self.duration + "\n\t" + "Description: " + self.description + "\n\t" + "Length: " + self.length + "\n\t" + "Location: " + self.location)
 
-class User(models.Model):
+class Hiker(models.Model):
     username = models.CharField(max_length=30)
     password = models.CharField(max_length=30)
     email = models.CharField(max_length=30)

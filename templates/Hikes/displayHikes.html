@@ -1,4 +1,40 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<section>
+    <div>
+        <br>
+        <h1>Your Hikes</h1>
+        <table  class="table-striped" style="table-layout:fixed;width:100%">
+            <thead>
+                <tr>
+                    <th style="width: 16%;">Your name</th>
+                    <th style="width: 16%;">Hike name</th>
+                    <th style="width: 17%;">duration</th>
+                    <th style="width: 17%;">description </th>
+                    <th style="width: 17%;">length</th>
+                    <th style="width: 17%;">location</th>
+                </tr>
+            </thead>
+            {% for Hike in HikesList %}
+            <tr>
+                <td>{{Hike.hikerName}}</td>
+                <td>{{Hike.name}}</td>
+                <td>{{Hike.duration}}</td>
+                <td>{{Hike.description}}</td>
+                <td>{{Hike.length}}</td>
+                <td>{{Hike.location}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br>
+        <div class="row justify-content-center">
+            <a class="btn btn-primary" href="{% url 'createHike' %}" style="width: 30%;">Create a Hike</a>
+            <a>&nbsp</a>
+            <a class="btn btn-primary" href="{% url 'editHike' %}" style="width: 30%;">Edit a Hike</a>
+            <a>&nbsp</a>
+            <a class="btn btn-primary" href="{% url 'deleteHike' %}" style="width: 30%;">Delete a Hike</a>
+        </div>
+    </div>
+</section>
 {% endblock %}

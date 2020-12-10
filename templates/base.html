@@ -27,9 +27,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="AboutMe">My Profile</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Hikes">My Hikes</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'createHike' %}">Add A Hike</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'displayHikes' %}">My Hikes</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'createHike' %}">Create A Hike</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'editHike' %}">Edit A Hike</a></li>
                     </ul>
                 </div>
             </div>

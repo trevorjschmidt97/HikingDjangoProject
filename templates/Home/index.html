@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<p style="font-size:50px;">This is the Home Page</p>
-<ul>
-    <li>A</li>
-    <li>B</li>
-    <li>C</li>
-</ul>
+<p style="font-size:50px;" class="row justify-content-center">This is the Home Page</p>
+<section>
+    <br>
+    <div class="row justify-content-center">Use the links above or below to access our features</div>
+        <br><br>
+    <div class="row justify-content-center">
+        <a class="btn btn-primary" href="{% url 'displayHikes' %}" style="width: 30%;">View Hikes</a>
+        <a>&nbsp</a>
+        <a class="btn btn-primary" href="{% url 'createHike' %}" style="width: 30%;">Create a Hike</a>
+        <a>&nbsp</a>
+        <a class="btn btn-primary" href="{% url 'editHike' %}" style="width: 30%;">Edit a Hike</a>
+    </div>
+</section>
 {% endblock %}

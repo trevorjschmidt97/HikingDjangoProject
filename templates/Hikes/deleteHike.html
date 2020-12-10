@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<p style="font-size:50px;">Create a hike</p>
+<form name='form' method='post' action='{% url 'deleteFinal' %}'>
+    {% csrf_token %}
+    <!-- <label for='hike.hikeID'>Hike ID: </label>
+    <br>
+    <input type='text' name='hike_hikeID' id='hike_hikeID'>
+    <br><br> -->
+    <div class="form-group row">
+        <label for="hike.hikeID"></label>
+        <div class="col-10">
+        {{ HikeChoices }}
+        </div>
+    </div>
+    <button type="submit">Delete Hike</button>
+</form>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<p style="font-size:50px;">Create a hike</p>
+<form name='form' method='post' action='{% url 'storeEditHike' %}'>
+    {% csrf_token %}
+    <!-- <label for='hike.hikeID'>Hike ID: </label>
+    <br>
+    <input type='text' name='hike_hikeID' id='hike_hikeID'>
+    <br><br> -->
+    <div class="form-group row">
+        <label for="hike.hikeID"></label>
+        <div class="col-10">
+        {{ HikeChoices }}
+        </div>
+    </div>
+    <label for='hike.hikerName'>Hiker Name: </label>
+    <br>
+    <input type='text' name='hike_hiker_name' id='hike_hiker_name'>
+    <br><br>
+    <label for='hike.name'>Hike Name: </label>
+    <br>
+    <input type='text' name='hike_name' id='hike_name'>
+    <br><br>
+    <label for='hike.duration'>Hike Duration (Enter whole minutes): </label>
+    <br>
+    <input type='text' name='hike_duration' id='hike_duration'>
+    <br><br>
+    <label for='hike.description'>Hike Description: </label>
+    <br>
+    <input type='text' name='hike_description' id='hike_description'>
+    <br><br>
+    <label for='hike.length'>Hike Length (Enter in miles): </label>
+    <br>
+    <input type='text' name='hike_length' id='hike_length'>
+    <br><br>
+    <label for='hike.location'>Hike Location: </label>
+    <br>
+    <input type='text' name='hike_location' id='hike_location'>
+    <br><br>
+    <button type='submit'>Update Hike</button>
+</form>
+{% endblock %}

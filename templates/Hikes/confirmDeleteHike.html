@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section>
+   <div>
+    <form name='form' method='post' action='{% url 'deleteFinal' %}'>
+        {% csrf_token %}
+        <br><br>
+        <h3>Are you sure you want to delete the Hike?</h3>
+        <button type='submit'>Delete</button>
+    </form>
+   </div>
+</section>
+{% endblock %}
